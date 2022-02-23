@@ -1,0 +1,23 @@
+connector:
+  name: github-doxic-new
+  identifier: githubdoxicnew
+  description:
+  orgIdentifier: default
+  projectIdentifier: workshopciedominic
+  type: Github
+  spec:
+    url: https://github.com/doxic
+    validationRepo: harness-cie-lab
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: doxic
+          tokenRef: githubtoken
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: githubtoken
+    executeOnDelegate: true
+    type: Account
